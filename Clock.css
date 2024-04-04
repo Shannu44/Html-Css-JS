@@ -12,6 +12,9 @@
     --white-color: #fff;
     --black-color:black;
     --red-color: #e74c3C;
+    --lightred-color:rgb(248, 11, 11);
+    --grey-color:rgb(0, 0, 0);
+    --light-yellow:rgb(246, 246, 161);
 }
 body
 {
@@ -114,4 +117,14 @@ body.dark
     background: var(--black-color);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+}
+#liveDate
+{
+    font-size:20px;
+    font-weight: 100px;
+    color:#18191a;
+    justify-content:center;
+    padding: 10px 20px;
+    display: inline-block;
+    color: var(--red-color);
 }

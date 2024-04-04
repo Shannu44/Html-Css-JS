@@ -33,3 +33,15 @@ const updateTime = () =>
 setInterval(updateTime, 1000);
 
 updateTime();
+
+function updateLiveDate() 
+{
+    var currentDate = new Date();
+    var options = { year: 'numeric', month: 'long', day: 'numeric',weekday: 'long' };
+    var formattedDate = currentDate.toLocaleDateString('en-US', options);
+    document.getElementById('liveDate').textContent = formattedDate;
+}
+
+setInterval(updateLiveDate, 1000);
+
+updateLiveDate();
