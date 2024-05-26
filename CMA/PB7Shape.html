@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script>
+var compositeTypes=[
+'source-over','source-in','source-out','source-atop',
+'destination-over','destination-in','destination-out','destination-atop',
+'lighter','darker','copy','xor'
+];
+
+function drawShape(){
+for(i=0;i<compositeTypes.length;i++){
+var label=document.createTextNode(compositeTypes[i]);
+document.getElementById('lab'+i).appendChild(label);
+var ctx=document.getElementById('t'+i).getContext('2d');
+
+ctx.fillStyle="#FF3366";
+ctx.fillRect(15,15,70,70);
+
+ctx.globalCompositeOperation=compositeTypes[i];
+
+ctx.fillStyle="#0066FF";
+ctx.beginPath();
+ctx.arc(75,75,35,0,Math.PI*2,true);
+ctx.fill();
+}
+}
+</script>
+</head>
+
+<body onload="drawShape();">
+<table border="1" align="center">
+<tr>
+<td><canvas id="t0" width="125" height="125"></canvas><br/>
+<label id="lab0"></label>
+</td>
+
+<td><canvas id="t1" width="125" height="125"></canvas><br/>
+<label id="lab1"></label>
+</td>
+
+<td><canvas id="t2" width="125" height="125"></canvas><br/>
+<label id="lab2"></label>
+</td>
+</tr>
+
+<tr>
+<td><canvas id="t3" width="125" height="125"></canvas><br/>
+<label id="lab3"></label>
+</td>
+
+<td><canvas id="t4" width="125" height="125"></canvas><br/>
+<label id="lab4"></label>
+</td>
+
+<td><canvas id="t5" width="125" height="125"></canvas><br/>
+<label id="lab5"></label>
+</td>
+</tr>
+
+<tr>
+<td><canvas id="t6" width="125" height="125"></canvas><br/>
+<label id="lab6"></label>
+</td>
+
+<td><canvas id="t7" width="125" height="125"></canvas><br/>
+<label id="lab7"></label>
+</td>
+
+<td><canvas id="t8" width="125" height="125"></canvas><br/>
+<label id="lab8"></label>
+</td>
+</tr>
+
+<tr>
+<td><canvas id="t9" width="125" height="125"></canvas><br/>
+<label id="lab9"></label>
+</td>
+
+<td><canvas id="t10" width="125" height="125"></canvas><br/>
+<label id="lab10"></label>
+</td>
+
+<td><canvas id="t11" width="125" height="125"></canvas><br/>
+<label id="lab11"></label>
+</td>
+</tr>
+</table>
+</body>
+</html>
